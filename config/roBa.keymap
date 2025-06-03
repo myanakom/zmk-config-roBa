@@ -83,6 +83,8 @@
 &kp LC(Z)       &kp LC(X)       &kp LC(C)             &trans        &trans         &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
 &kp LEFT_SHIFT  &trans          &trans                &trans        &trans         &trans      &trans   &trans                          &kp F12
             >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         NUM {
