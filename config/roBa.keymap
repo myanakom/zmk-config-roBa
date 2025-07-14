@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
@@ -80,7 +81,7 @@
 &kp Q       &kp W      &kp E         &kp R  &kp T                         &kp Y      &kp U  &kp I      &kp O      &kp P
 &kp A       &kp S      &kp D         &kp F  &kp G  &trans      &trans     &kp H      &kp J  &kp K      &kp L      &kp DELETE
 &kp Z       &kp X      &kp C         &kp V  &kp B  &trans      &trans     &kp N      &kp M  &mkp LCLK  &mkp RCLK  &mkp MB3
-&kp LSHIFT  &kp LCTRL  &kp LEFT_ALT  &to 1  &to 2  &to 3       &kp SPACE  &kp ENTER                               &kp LC(SPACE)
+&kp LSHIFT  &kp LCTRL  &kp LEFT_ALT  &to 1  &to 2  &to 3       &kp SPACE  &kp ENTER                               &out OUT_USB
             >;
         };
 
@@ -89,7 +90,7 @@
 &kp ESC       &kp APOSTROPHE  &kp DOUBLE_QUOTES     &kt HASH      &kp AMPERSAND                           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSPACE
 &kp TAB       &kp LC(S)       &kp NON_US_BACKSLASH  &kp QUESTION  &kp EXCLAMATION  &trans      &trans     &kp PLUS              &kp MINUS              &kp ASTERISK      &kp SLASH          &kp DELETE
 &kp LC(Z)     &kp LC(X)       &kp LC(C)             &kp LC(V)     &kp LC(Y)        &trans      &trans     &kp COMMA             &kp PERIOD             &kp AT_SIGN       &kp EQUAL          &trans
-&kp CAPSLOCK  &kp LCTRL       &kp LEFT_ALT          &to 1         &to 2            &to 3       &kp SPACE  &kp ENTER                                                                         &trans
+&kp CAPSLOCK  &kp LCTRL       &kp LEFT_ALT          &to 1         &to 2            &to 3       &kp SPACE  &kp ENTER                                                                         &out OUT_BLE
             >;
         };
 
