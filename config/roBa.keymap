@@ -9,6 +9,28 @@
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 
+// 日本語キーボード設定でのシンボルマーク変換定義
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -92,10 +114,10 @@
 
         Layer1 {
             bindings = <
-&kp ESC       &kp APOSTROPHE  &kp DOUBLE_QUOTES     &kt HASH      &kp AMPERSAND                           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSPACE
-&kp TAB       &kp LC(S)       &kp NON_US_BACKSLASH  &kp QUESTION  &kp EXCLAMATION  &trans      &trans     &kp PLUS              &kp MINUS              &kp ASTERISK      &kp SLASH          &kp DELETE
-&kp LC(Z)     &kp LC(X)       &kp LC(C)             &kp LC(V)     &kp LC(Y)        &trans      &trans     &kp COMMA             &kp PERIOD             &kp AT_SIGN       &kp EQUAL          &trans
-&kp CAPSLOCK  &kp LCTRL       &kp LEFT_ALT          &mo 1         &mo 2            &mo 3       &kp SPACE  &kp ENTER                                                                         &out OUT_BLE
+&kp ESC       &kp JP_QUOTE    &kp JP_DQUOTE         &kt HASH          &kp JP_AMPERSAND                        &kp JP_LPAREN         &kp JP_RPAREN          &kp JP_LBRACKET   &kp JP_RBRACKET    &kp BACKSPACE
+&kp TAB       &kp LC(S)       &kp NON_US_BACKSLASH  &kp QUESTION      &kp EXCLAMATION      &trans      &trans     &kp JP_PLUS           &kp MINUS              &kp JP_ASTERISK   &kp SLASH          &kp DELETE
+&kp LC(Z)     &kp LC(X)       &kp LC(C)             &kp LC(V)         &kp LC(Y)            &trans      &trans     &kp COMMA             &kp PERIOD             &kp JP_AT         &kp JP_EQUAL       &trans
+&kp CAPSLOCK  &kp LCTRL       &kp LEFT_ALT          &mo 1             &mo 2                &mo 3       &kp SPACE  &kp ENTER                                                                         &out OUT_BLE
             >;
         };
 
