@@ -39,44 +39,44 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    // combos {
+    //     compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
+    //     tab {
+    //         bindings = <&kp TAB>;
+    //         key-positions = <11 12>;
+    //     };
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
+    //     shift_tab {
+    //         bindings = <&kp LS(TAB)>;
+    //         key-positions = <12 13>;
+    //     };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
+    //     muhennkann {
+    //         bindings = <&to_layer_0 INT_MUHENKAN>;
+    //         key-positions = <11 10>;
+    //     };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
+    //     double_quotation {
+    //         bindings = <&kp DOUBLE_QUOTES>;
+    //         key-positions = <20 21>;
+    //     };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
+    //     eq {
+    //         bindings = <&kp EQUAL>;
+    //         key-positions = <24 25>;
+    //     };
 
-        TO_Layer4 {
-            bindings = <&to 4>;
-            key-positions = <37 38>;
-        };
+    //     TO_Layer4 {
+    //         bindings = <&to 4>;
+    //         key-positions = <37 38>;
+    //     };
 
-        TO_Layer5 {
-            bindings = <&to 5>;
-            key-positions = <39 38>;
-        };
-    };
+    //     TO_Layer5 {
+    //         bindings = <&to 5>;
+    //         key-positions = <39 38>;
+    //     };
+    // };
 
     macros {
         to_layer_0: to_layer_0 {
