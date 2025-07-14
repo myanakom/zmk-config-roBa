@@ -2,16 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt        Sym_Num {
-            bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR    &kp PERCENT                       &kp AMPERSAND  &kp SINGLE_QUOTE  &kp EQUAL      &kp CARET       &kp BACKSLASH
-&kp NUMBER_1     &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans      &trans  &kp PLUS       &kp TILDE         &kp PIPE       &kp AT_SIGN     &kp COLON
-&kp NUMBER_6     &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans      &trans  &none          &kp ASTERISK      &kp GRAVE      &kp UNDERSCORE  &kp SEMICOLON
-&trans           &trans             &trans        &trans        &trans        &trans      &trans  &trans                                                           &trans
-            >;
-        };s/zmk/pointing.h>
-
-// 英語キーボード設定用（標準的なZMK設定）
+#include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
 #define SCROLL 5
@@ -90,7 +81,7 @@
 &kp Q       &kp W      &kp E         &kp R  &kp T                         &kp Y      &kp U  &kp I      &kp O      &kp P
 &kp A       &kp S      &kp D         &kp F  &kp G  &trans      &trans     &kp H      &kp J  &kp K      &kp L      &kp DELETE
 &kp Z       &kp X      &kp C         &kp V  &kp B  &trans      &trans     &kp N      &kp M  &mkp LCLK  &mkp RCLK  &mkp MB3
-&kp LSHIFT  &kp LCTRL  &kp LEFT_ALT  &to 1  &to 2  &to 3       &kp SPACE  &kp ENTER                               &kp GRAVE
+&kp LSHIFT  &kp LCTRL  &kp LEFT_ALT  &to 1  &to 2  &to 3       &kp SPACE  &kp ENTER                               &out OUT_USB
             >;
         };
 
@@ -105,10 +96,10 @@
 
         Layer2 {
             bindings = <
-&kp ESC  &trans        &trans     &kp UP_ARROW    &trans                                  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
-&kp TAB  &trans        &kp LEFT   &trans          &kp RIGHT_ARROW  &trans      &trans     &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
-&trans   &trans        &trans     &kp DOWN_ARROW  &trans           &trans      &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&trans                   &kp LEFT_WIN    &trans     &to 1           &to 2            &to 3       &kp SPACE  &kp RET                                                 &kp PIPE
+&kp ESC  &trans        &trans    &kp UP_ARROW    &trans                                  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
+&kp TAB  &trans        &kp LEFT  &trans          &kp RIGHT_ARROW  &trans      &trans     &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
+&trans   &trans        &trans    &kp DOWN_ARROW  &trans           &trans      &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+&trans   &kp LEFT_WIN  &trans    &to 1           &to 2            &to 3       &kp SPACE  &kp RET                                                 &kp PIPE
             >;
         };
 
@@ -147,24 +138,6 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-        };
-
-        Sym_Num {
-            bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR    &kp PERCENT                       &kp AMPERSAND  &kp SINGLE_QUOTE  &kp EQUAL      &kp CARET       &kp BACKSLASH
-&kp NUMBER_1     &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans      &trans  &kp PLUS       &kp TILDE         &kp PIPE       &kp AT_SIGN     &kp COLON
-&kp NUMBER_6     &kp NUMBER_7       &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans      &trans  &none          &kp ASTERISK      &kp GRAVE      &kp UNDERSCORE  &kp SEMICOLON
-&trans           &trans             &trans        &trans        &trans        &trans      &trans  &trans                                                           &trans
-            >;
-        };
-
-        layer_8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
