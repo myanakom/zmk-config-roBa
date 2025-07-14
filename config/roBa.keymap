@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -28,7 +29,6 @@
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
-
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -106,7 +106,7 @@
 &kp Q       &kp W      &kp E         &kp R  &kp T                         &kp Y      &kp U  &kp I      &kp O      &kp P
 &kp A       &kp S      &kp D         &kp F  &kp G  &trans      &trans     &kp H      &kp J  &kp K      &kp L      &kp DELETE
 &kp Z       &kp X      &kp C         &kp V  &kp B  &trans      &trans     &kp N      &kp M  &mkp LCLK  &mkp RCLK  &mkp MB3
-&kp LSHIFT  &kp LCTRL  &kp LEFT_ALT  &to 1  &to 2  &to 3       &kp SPACE  &kp ENTER                               &out OUT_USB
+&kp LSHIFT  &kp LCTRL  &kp LEFT_ALT  &to 1  &to 2  &to 3       &kp SPACE  &kp ENTER                               &kp LANG_ZENKAKUHANKAKU
             >;
         };
 
@@ -121,10 +121,10 @@
 
         Layer2 {
             bindings = <
-&kp ESC  &trans        &trans    &kp UP_ARROW    &trans                                  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
-&kp TAB  &trans        &kp LEFT  &trans          &kp RIGHT_ARROW  &trans      &trans     &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
-&trans   &trans        &trans    &kp DOWN_ARROW  &trans           &trans      &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&trans   &kp LEFT_WIN  &trans    &to 1           &to 2            &to 3       &kp SPACE  &kp RET                                                 &kp PIPE
+&kp ESC                  &trans          &trans     &kp UP_ARROW    &trans                                  &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
+&kp TAB                  &trans          &kp LEFT   &trans          &kp RIGHT_ARROW  &trans      &trans     &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
+&kp LANG_ZENKAKUHANKAKU  &kp LANGUAGE_4  &kp LANG3  &kp DOWN_ARROW  &trans           &trans      &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+&trans                   &kp LEFT_WIN    &trans     &to 1           &to 2            &to 3       &kp SPACE  &kp RET                                                 &kp PIPE
             >;
         };
 
@@ -168,10 +168,19 @@
 
         Sym_Num {
             bindings = <
-&kp EXCLAMATION    &kp JP_DQUOTE    &kp HASH         &kp DOLLAR      &kp PERCENT                         &kp JP_AMPERSAND  &kp JP_QUOTE       &kp JP_EQUAL     &kp JP_CARET      &kp JP_YEN
-&kp NUMBER_1       &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4    &kp NUMBER_5    &trans      &trans  &kp JP_PLUS       &kp JP_TILDE       &kp JP_PIPE      &kp JP_AT         &kp JP_COLON
-&kp NUMBER_6       &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9    &kp NUMBER_0    &trans      &trans  &none             &kp JP_ASTERISK    &kp JP_BACKQUOTE &kp JP_UNDERSCORE &kp SEMICOLON
-&trans             &trans           &trans           &trans          &trans          &trans      &trans  &trans                                                                  &trans
+&kp EXCLAMATION  &kp JP_DQUOTE  &kp HASH      &kp DOLLAR    &kp PERCENT                       &kp JP_AMPERSAND  &kp JP_QUOTE     &kp JP_EQUAL      &kp JP_CARET       &kp JP_YEN
+&kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans      &trans  &kp JP_PLUS       &kp JP_TILDE     &kp JP_PIPE       &kp JP_AT          &kp JP_COLON
+&kp NUMBER_6     &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans      &trans  &none             &kp JP_ASTERISK  &kp JP_BACKQUOTE  &kp JP_UNDERSCORE  &kp SEMICOLON
+&trans           &trans         &trans        &trans        &trans        &trans      &trans  &trans                                                                  &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
