@@ -5,11 +5,13 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // 日本語キーボード対応の定義（半角/全角切り替え用）
+
 #define JP_HANZEN       GRAVE             // 半角/全角
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 
 // 日本語キーボード設定でのシンボルマーク変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -30,7 +32,6 @@
 #define JP_RPAREN       LEFT_PARENTHESIS  // )
 #define JP_LBRACE       RIGHT_BRACE       // {
 #define JP_RBRACE       PIPE              // }
-
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -43,31 +44,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
 
         TO_Layer4 {
             bindings = <&to 4>;
@@ -114,19 +90,19 @@
 
         Layer1 {
             bindings = <
-&kp ESC       &kp JP_QUOTE    &kp JP_DQUOTE         &kt HASH          &kp JP_AMPERSAND                        &kp JP_LPAREN         &kp JP_RPAREN          &kp JP_LBRACKET   &kp JP_RBRACKET    &kp BACKSPACE
-&kp TAB       &kp LC(S)       &kp NON_US_BACKSLASH  &kp QUESTION      &kp EXCLAMATION      &trans      &trans     &kp JP_PLUS           &kp MINUS              &kp JP_ASTERISK   &kp SLASH          &kp DELETE
-&kp LC(Z)     &kp LC(X)       &kp LC(C)             &kp LC(V)         &kp LC(Y)            &trans      &trans     &kp COMMA             &kp PERIOD             &kp JP_AT         &kp JP_EQUAL       &trans
-&kp CAPSLOCK  &kp LCTRL       &kp LEFT_ALT          &mo 1             &mo 2                &mo 3       &kp SPACE  &kp ENTER                                                                         &out OUT_BLE
+&kp ESC       &kp JP_QUOTE  &kp JP_DQUOTE         &kt HASH      &kp JP_AMPERSAND                         &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp BACKSPACE
+&kp TAB       &kp LC(S)     &kp NON_US_BACKSLASH  &kp QUESTION  &kp EXCLAMATION   &trans      &trans     &kp JP_PLUS    &kp MINUS      &kp JP_ASTERISK  &kp SLASH        &kp DELETE
+&kp LC(Z)     &kp LC(X)     &kp LC(C)             &kp LC(V)     &kp LC(Y)         &trans      &trans     &kp COMMA      &kp PERIOD     &kp JP_AT        &kp JP_EQUAL     &trans
+&kp CAPSLOCK  &kp LCTRL     &kp LEFT_ALT          &mo 1         &mo 2             &mo 3       &kp SPACE  &kp ENTER                                                       &out OUT_BLE
             >;
         };
 
         Layer2 {
             bindings = <
-&kp ESC         &trans        &trans      &kp UP_ARROW    &trans                                  &kp JP_PLUS       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_ASTERISK
-&kp TAB         &trans        &kp LEFT    &trans          &kp RIGHT_ARROW  &trans      &trans     &kp MINUS         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
-&kp JP_HANZEN   &kp JP_EISU   &kp JP_KANA &kp DOWN_ARROW  &trans           &trans      &trans     &kp NUMBER_0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL
-&trans          &kp LEFT_WIN  &trans      &mo 1           &mo 2            &mo 3       &kp SPACE  &kp RET                                                     &kp JP_PIPE
+&kp ESC        &trans        &trans       &kp UP_ARROW    &trans                                  &kp JP_PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_ASTERISK
+&kp TAB        &trans        &kp LEFT     &trans          &kp RIGHT_ARROW  &trans      &trans     &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
+&kp JP_HANZEN  &kp JP_EISU   &kp JP_KANA  &kp DOWN_ARROW  &trans           &trans      &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL
+&trans         &kp LEFT_WIN  &trans       &mo 1           &mo 2            &mo 3       &kp SPACE  &kp RET                                                 &kp JP_PIPE
             >;
         };
 
