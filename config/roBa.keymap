@@ -101,7 +101,7 @@
             bindings = <
 &kp ESC        &trans        &trans       &kp UP_ARROW    &trans                                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS   &kp JP_ASTERISK
 &kp TAB        &trans        &kp LEFT     &trans          &kp RIGHT_ARROW  &trans      &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp SLASH
-&kp JP_HANZEN  &kp JP_EISU   &kp JP_KANA  &kp DOWN_ARROW  &kp NUMBER_0     &trans      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL  &trans
+&kp JP_HANZEN  &kp JP_EISU   &kp JP_KANA  &kp DOWN_ARROW  &kp NUMBER_0     &trans      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL  &kp PIPE
 &kp JP_KANA    &kp LEFT_WIN  &trans       &mo 1           &mo 2            &mo 3       &kp SPACE  &kp RET                                                 &kp JP_PIPE
             >;
         };
