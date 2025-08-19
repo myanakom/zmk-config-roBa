@@ -25,7 +25,7 @@
 #define JP_COLON        SINGLE_QUOTE      // :
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_BACKQUOTE    LEFT_BRACE        // `
-#define JP_UNDERSCORE   LS(0x87)          // _ 1
+#define JP_UNDERSCORE   LS(0x87)          // _
 #define JP_LBRACKET     RIGHT_BRACKET     // [
 #define JP_RBRACKET     BACKSLASH         // ]
 #define JP_LPAREN       ASTERISK          // (
@@ -92,17 +92,17 @@
             bindings = <
 &kp ESC       &kp JP_QUOTE  &kp JP_DQUOTE         &kt HASH      &kp JP_AMPERSAND                         &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp BACKSPACE
 &kp TAB       &kp LC(S)     &kp NON_US_BACKSLASH  &kp QUESTION  &kp EXCLAMATION   &trans      &trans     &kp JP_PLUS    &kp MINUS      &kp JP_ASTERISK  &kp SLASH        &kp DELETE
-&kp LC(Z)     &kp LC(X)     &kp LC(C)             &kp LC(V)     &kp LC(Y)         &trans      &trans     &kp COMMA      &kp PERIOD     &kp JP_AT        &kp JP_EQUAL     &trans
+&kp LC(Z)     &kp LC(X)     &kp LC(C)             &kp LC(V)     &kp LC(Y)         &trans      &trans     &kp COMMA      &kp PERIOD     &kp JP_AT        &kp JP_EQUAL     &kp JP_UNDERSCORE
 &kp CAPSLOCK  &kp LCTRL     &kp LEFT_ALT          &mo 1         &mo 2             &mo 3       &kp SPACE  &kp ENTER                                                       &out OUT_BLE
             >;
         };
 
         Layer2 {
             bindings = <
-&kp ESC        &trans        &trans       &kp UP_ARROW    &trans                                  &kp JP_PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_ASTERISK
-&kp TAB        &trans        &kp LEFT     &trans          &kp RIGHT_ARROW  &trans      &trans     &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH
-&kp JP_HANZEN  &kp JP_EISU   &kp JP_KANA  &kp DOWN_ARROW  &trans           &trans      &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL
-&trans         &kp LEFT_WIN  &trans       &mo 1           &mo 2            &mo 3       &kp SPACE  &kp RET                                                 &kp JP_PIPE
+&kp ESC        &trans        &trans       &kp UP_ARROW    &trans                                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS   &kp JP_ASTERISK
+&kp TAB        &trans        &kp LEFT     &trans          &kp RIGHT_ARROW  &trans      &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp SLASH
+&kp JP_HANZEN  &kp JP_EISU   &kp JP_KANA  &kp DOWN_ARROW  &kp NUMBER_0     &trans      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL  &trans
+&kp JP_KANA    &kp LEFT_WIN  &trans       &mo 1           &mo 2            &mo 3       &kp SPACE  &kp RET                                                 &kp JP_PIPE
             >;
         };
 
