@@ -14,16 +14,16 @@
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
 #define JP_EQUAL        UNDER             // =
-#define JP_CARET        EQUAL             // ^
+#define JP_CARET        EQUAL             // ^ 1
 #define JP_YEN          0x89              // ¥
 #define JP_PLUS         COLON             // +
-#define JP_TILDE        PLUS              // ~
+#define JP_TILDE        PLUS              // ~ 1
 #define JP_PIPE         LS(0x89)          // |
 #define JP_AT           LEFT_BRACKET      // @
 #define JP_COLON        SINGLE_QUOTE      // :
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_BACKQUOTE    LEFT_BRACE        // `
-#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_UNDERSCORE   LS(0x87)          // _ 1
 #define JP_LBRACKET     RIGHT_BRACKET     // [
 #define JP_RBRACKET     BACKSLASH         // ]
 #define JP_LPAREN       ASTERISK          // (
@@ -116,7 +116,7 @@
             bindings = <
 &kp ESC       &kp JP_QUOTE    &kp JP_DQUOTE         &kt HASH          &kp JP_AMPERSAND                        &kp JP_LPAREN         &kp JP_RPAREN          &kp JP_LBRACKET   &kp JP_RBRACKET    &kp BACKSPACE
 &kp TAB       &kp LC(S)       &kp NON_US_BACKSLASH  &kp QUESTION      &kp EXCLAMATION      &trans      &trans     &kp JP_PLUS           &kp MINUS              &kp JP_ASTERISK   &kp SLASH          &kp DELETE
-&kp LC(Z)     &kp LC(X)       &kp LC(C)             &kp LC(V)         &kp LC(Y)            &trans      &trans     &kp COMMA             &kp PERIOD             &kp JP_AT         &kp JP_EQUAL       &trans
+&kp LC(Z)     &kp LC(X)       &kp LC(C)             &kp LC(V)         &kp JP_UNDERSCORE      &trans      &trans     &kp COMMA             &kp PERIOD             &kp JP_AT         &kp JP_EQUAL       &trans
 &kp CAPSLOCK  &kp LCTRL       &kp LEFT_ALT          &mo 1             &mo 2                &mo 3       &kp SPACE  &kp ENTER                                                                         &out OUT_BLE
             >;
         };
