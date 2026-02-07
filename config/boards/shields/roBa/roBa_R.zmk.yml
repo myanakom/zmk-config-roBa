@@ -1,0 +1,11 @@
+file_format: "1"
+id: roBa_R
+name: roBa Right
+type: shield
+url: https://github.com/kumamuk-git/zmk-config-roBa
+requires: [seeed_xiao_ble]
+siblings:
+  - roBa_L
+features:
+  - keys
+  - pointing
