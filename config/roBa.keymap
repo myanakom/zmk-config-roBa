@@ -32,6 +32,10 @@
 #define JP_RPAREN       LEFT_PARENTHESIS  // )
 #define JP_LBRACE       RIGHT_BRACE       // {
 #define JP_RBRACE       PIPE              // }
+
+// Layout-independent angle brackets
+#define JP_LT           LS(COMMA)         // <
+#define JP_GT           LS(PERIOD)        // >
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -91,7 +95,7 @@
         Layer1 {
             bindings = <
 &kp ESC       &kp JP_QUOTE  &kp JP_DQUOTE         &kp JP_LBRACE &kp JP_RBRACE                            &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp BACKSPACE
-&kp TAB       &kp NON_US_BACKSLASH  &kp GREATER_THAN  &kp QUESTION  &kp EXCLAMATION   &trans      &trans     &kp JP_COLON   &kp SEMICOLON  &kp JP_TILDE     &kp JP_BACKQUOTE &kp DELETE
+&kp TAB       &kp JP_LT             &kp JP_GT         &kp QUESTION  &kp EXCLAMATION   &trans      &trans     &kp JP_COLON   &kp SEMICOLON  &kp JP_TILDE     &kp JP_BACKQUOTE &kp DELETE
 &kp PERCENT   &kp JP_YEN    &kp HASH              &kp JP_AMPERSAND  &kp JP_CARET      &trans      &trans     &kp COMMA      &kp PERIOD     &kp JP_AT        &kp JP_EQUAL     &kp JP_UNDERSCORE
 &kp CAPSLOCK  &kp LCTRL     &kp LEFT_ALT          &mo 1         &mo 2             &mo 3       &kp SPACE  &kp ENTER                                                       &out OUT_BLE
             >;
@@ -99,7 +103,7 @@
 
         Layer2 {
             bindings = <
-&kp ESC        &kp NON_US_BACKSLASH  &kp GREATER_THAN  &kp UP_ARROW    &trans                                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS   &kp JP_ASTERISK
+&kp ESC        &kp JP_LT             &kp JP_GT         &kp UP_ARROW    &trans                                  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS   &kp JP_ASTERISK
 &kp TAB        &kp DOLLAR            &kp LEFT     &trans          &kp RIGHT_ARROW  &trans      &trans     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS     &kp SLASH
 &kp JP_HANZEN  &kp JP_EISU           &kp JP_KANA  &kp DOWN_ARROW  &kp NUMBER_0     &trans      &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL  &kp JP_PIPE
 &kp JP_KANA    &kp LEFT_WIN          &trans       &mo 1           &mo 2            &mo 3       &kp SPACE  &kp RET                                                 &trans
