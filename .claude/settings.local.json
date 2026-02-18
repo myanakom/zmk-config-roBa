@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs ls:*)",
+      "Bash(gh search issues:*)",
+      "Bash(gh issue list:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:zmk.dev)",
+      "WebFetch(domain:www.reddit.com)",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
