@@ -16,7 +16,11 @@
       "WebFetch(domain:api.github.com)",
       "Bash(gh api:*)",
       "Bash(python3:*)",
-      "Bash(gh search code:*)"
+      "Bash(gh search code:*)",
+      "Bash(gh auth status:*)",
+      "Bash(unset:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:discord.com)"
     ]
   }
 }
