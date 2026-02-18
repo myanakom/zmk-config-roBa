@@ -1,20 +1,14 @@
 if SHIELD_ROBA_R
 
-config ZMK_KEYBOARD_NAME
-    default "roBa_R"
-
-config ZMK_SPLIT
-    default y
-
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_ROBA_L
+if SHIELD_ROBA_R || SHIELD_ROBA_L
 
 config ZMK_KEYBOARD_NAME
-    default "roBa_L"
+    default "roBa"
 
 config ZMK_SPLIT
     default y
